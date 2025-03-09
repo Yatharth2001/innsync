@@ -14,6 +14,27 @@
 // }
 // export default CountryFlagAndName;
 
+// import { findCountryByCode } from "@/utils/countries";
+
+// function CountryFlagAndName({ countryCode }: { countryCode: string }) {
+//   const validCountry = findCountryByCode(countryCode);
+//   const countryName =
+//     validCountry!.name.length > 20
+//       ? `${validCountry!.name.substring(0, 20)}...`
+//       : validCountry!.name;
+//   return (
+//     <span className="flex justify-between items-center gap-2 text-sm">
+//       <img
+//         src={validCountry?.flag}
+//         alt={`${validCountry?.name} flag`}
+//         className="w-6 h-4"
+//       />
+//       {countryName}
+//     </span>
+//   );
+// }
+// export default CountryFlagAndName;
+
 import { findCountryByCode } from "@/utils/countries";
 
 function CountryFlagAndName({ countryCode }: { countryCode: string }) {
@@ -23,7 +44,7 @@ function CountryFlagAndName({ countryCode }: { countryCode: string }) {
       ? `${validCountry!.name.substring(0, 20)}...`
       : validCountry!.name;
   return (
-    <span className="flex justify-between items-center gap-2 text-sm">
+    <span className="flex items-center gap-2 text-sm">
       <img
         src={validCountry?.flag}
         alt={`${validCountry?.name} flag`}
@@ -33,4 +54,5 @@ function CountryFlagAndName({ countryCode }: { countryCode: string }) {
     </span>
   );
 }
+
 export default CountryFlagAndName;
