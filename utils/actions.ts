@@ -497,7 +497,7 @@ export const deleteBookingAction = async (prevState: { bookingId: string }) => {
   } catch (error) {
     return renderError(error);
   }
-}
+};
 
 export const fetchRentals = async () => {
   const user = await getAuthUser();
@@ -561,3 +561,22 @@ export async function deleteRentalAction(prevState: { propertyId: string }) {
     return renderError(error);
   }
 }
+
+export const fetchRentalDetails = async (propertyId: string) => {
+  const user = await getAuthUser();
+
+  return db.property.findUnique({
+    where: {
+      id: propertyId,
+      profileId: user.id,
+    },
+  });
+};
+
+export const updatePropertyAction = async () => {
+  return { message: "update property action" };
+};
+
+export const updatePropertyImageAction = async () => {
+  return { message: "update property image" };
+};
