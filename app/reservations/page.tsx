@@ -27,7 +27,7 @@ async function ReservationsPage() {
         total reservations : {reservations.length}
       </h4>
       <Table>
-        <TableCaption>A list of your recent reservations.</TableCaption>
+        <TableCaption>A list of recent reservations.</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead>Property Name</TableHead>

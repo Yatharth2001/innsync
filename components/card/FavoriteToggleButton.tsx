@@ -10,6 +10,7 @@ async function FavoriteToggleButton({ propertyId }: { propertyId: string }) {
   if (!userId) return <CardSignInButton />;
 
   const favoriteId = await fetchFavoriteId({ propertyId });
+  
 
   return <FavoriteToggleForm favoriteId={favoriteId} propertyId={propertyId} />;
 }
